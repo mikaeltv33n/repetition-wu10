@@ -1,29 +1,72 @@
 {
-	"animals": [
-		{
-			"id": "1",
-			"name": "Fido",
-			"breed": "Labrador",
-			"age": 4,
-			"color": "Gul",
-			"images": [
-				{
-					"url": "https://www.marthastewart.com/thmb/Ki1fnPkHDxYQv_kAN2HtBxwOELY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/happy-labrador-retriever-getty-0322-2000-eb585d9e672e47da8b1b7e9d3215a5cb.jpg",
-					"alt": "portræt af gul labrador hund med træer i baggruden"
-				}
-			]
-		},{
-			"id": "2",
-			"name": "Carlo",
-			"breed": "Chihuahua",
-			"age": 5,
-			"color": "Brun",
-			"images": [
-				{
-					"url": "https://www.raisedrightpets.com/wp-content/uploads/2022/09/shutterstock_1798926553.jpg.webp",
-					"alt": "portræt af en brun chihuahua på en græsplæne"
-				}
-			]
-		}
-	]
+  "subscribers": [
+    {
+      "id": "21e7",
+      "email": "be@rts.dk",
+      "createdAt": "09:24:30 GMT+0200 (Centraleuropæisk sommertid)"
+    },
+    {
+      "id": "80b1",
+      "email": "hej@hej.dk",
+      "createdAt": "10:46:56 GMT+0200 (Centraleuropæisk sommertid)"
+    },
+    {
+      "id": "e5f5",
+      "email": "hello@hej.dk",
+      "createdAt": "11:00:41 GMT+0200 (Centraleuropæisk sommertid)"
+    },
+    {
+      "id": "be9c",
+      "email": "hello@hej.dk",
+      "createdAt": "11:00:43 GMT+0200 (Centraleuropæisk sommertid)"
+    },
+    {
+      "id": "26ad",
+      "email": "hello@hej.dk",
+      "createdAt": "11:00:44 GMT+0200 (Centraleuropæisk sommertid)"
+    },
+    {
+      "id": "5913",
+      "email": "hello@hej.dk",
+      "createdAt": "11:00:45 GMT+0200 (Centraleuropæisk sommertid)"
+    },
+    {
+      "id": "68be",
+      "email": "hello@hej.dk",
+      "createdAt": "11:00:45 GMT+0200 (Centraleuropæisk sommertid)"
+    },
+    {
+      "id": "b1e4",
+      "email": "hello@hej.dk",
+      "createdAt": "11:00:45 GMT+0200 (Centraleuropæisk sommertid)"
+    }
+  ],
+  "animals": [
+    {
+      "id": "1",
+      "name": "Fido",
+      "breed": "Labrador",
+      "age": 4,
+      "color": "Gul",
+      "images": [
+        {
+          "url": "https://www.marthastewart.com/thmb/Ki1fnPkHDxYQv_kAN2HtBxwOELY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/happy-labrador-retriever-getty-0322-2000-eb585d9e672e47da8b1b7e9d3215a5cb.jpg",
+          "alt": "portræt af gul labrador hund med træer i baggruden"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Carlo",
+      "breed": "Chihuahua",
+      "age": 5,
+      "color": "Brun",
+      "images": [
+        {
+          "url": "https://www.raisedrightpets.com/wp-content/uploads/2022/09/shutterstock_1798926553.jpg.webp",
+          "alt": "portræt af en brun chihuahua på en græsplæne"
+        }
+      ]
+    }
+  ]
 }
