@@ -1,26 +1,20 @@
 import Link from "next/link";
-import Login from "@/actions/login";
-
 export default function Header() {
 	return (
-		<header className="bg-green-900 text-white py-4 px-8 flex justify-between">
-			<Link href="/" className="text-2xl">Leah's Hundeinternat</Link>
-			<form action={Login}>
-				<div className="flex flex-col">
-					<label>
-						Email
-						<input type="email" name="email" className="text-black" />
-					</label>
-				</div>
-				<div className="flex flex-col">
-					<label>
-						Adgangskode
-						<input type="password" name="password" className="text-black" />
-					</label>
-				</div>
-				<button className="bg-blue-500 py-2 px-4">Log ind</button>
-				<p>Har du ikke en konto? <Link href="/register" className="text-blue-500 underline">Opret en gratis konto!</Link></p>
-			</form>
+		<header className="bg-white space-x-40 text-black py-4 px-8 flex justify-evenly items-center border-b ">
+			<div className="flex items-center space-x-4">
+				<img className="h-8 w-6" src="/logo.png" alt="Logo" />
+				<Link href="/" className="text-2xl">Foreningen for Dyrevelfærd</Link>
+			</div>
+			<nav className="flex space-x-6">
+				<Link href="/"className="text-gray-500 hover:text-black" >Hjem</Link>
+				<Link href="" className="text-gray-500 hover:text-black" >Om os</Link>
+				<Link href="" className="text-gray-500 hover:text-black" >Bliv frivillig</Link>
+				<Link href="" className="text-gray-500 hover:text-black" >Dyr i nød?</Link>
+				<Link href="" className="text-gray-500 hover:text-black" >Adopter et dyr</Link>
+
+
+			</nav>
 		</header>
 	)
 }

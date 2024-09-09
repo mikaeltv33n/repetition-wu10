@@ -1,47 +1,6 @@
 {
 	"users": [],
-  "subscribers": [
-    {
-      "id": "21e7",
-      "email": "be@rts.dk",
-      "createdAt": "09:24:30 GMT+0200 (Centraleuropæisk sommertid)"
-    },
-    {
-      "id": "80b1",
-      "email": "hej@hej.dk",
-      "createdAt": "10:46:56 GMT+0200 (Centraleuropæisk sommertid)"
-    },
-    {
-      "id": "e5f5",
-      "email": "hello@hej.dk",
-      "createdAt": "11:00:41 GMT+0200 (Centraleuropæisk sommertid)"
-    },
-    {
-      "id": "be9c",
-      "email": "hello@hej.dk",
-      "createdAt": "11:00:43 GMT+0200 (Centraleuropæisk sommertid)"
-    },
-    {
-      "id": "26ad",
-      "email": "hello@hej.dk",
-      "createdAt": "11:00:44 GMT+0200 (Centraleuropæisk sommertid)"
-    },
-    {
-      "id": "5913",
-      "email": "hello@hej.dk",
-      "createdAt": "11:00:45 GMT+0200 (Centraleuropæisk sommertid)"
-    },
-    {
-      "id": "68be",
-      "email": "hello@hej.dk",
-      "createdAt": "11:00:45 GMT+0200 (Centraleuropæisk sommertid)"
-    },
-    {
-      "id": "b1e4",
-      "email": "hello@hej.dk",
-      "createdAt": "11:00:45 GMT+0200 (Centraleuropæisk sommertid)"
-    }
-  ],
+  "subscribers": [],
   "animals": [
     {
       "id": "1",

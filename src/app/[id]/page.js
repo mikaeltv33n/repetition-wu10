@@ -5,7 +5,7 @@ export default async function AnimalDetails({ params }) {
 	const response = await fetch(`http://localhost:3001/animals/${params.id}`)
 	const data = await response.json()
 
-	metadata.title = `${data.name} | Leah's Hundeinternat`
+	metadata.title = `${data.name} | Foreningen for Dyrevelfærd`
 
 	return (
 		<article>

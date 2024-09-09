@@ -5,8 +5,8 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata = {
-  title: "Leah's Hundeinternat",
-  description: "Find din næste hund hos os!",
+  title: "Foreningen for Dyrevelfærd",
+  description: "vi specialisere os i dyrevelfærd",
 };
 
 export default function RootLayout({ children }) {
