@@ -1,4 +1,5 @@
 import { metadata } from "./layout";
+import Newsletter from "@/components/newsletter";
 
 export default async function Home() {
   const aboutsResponse = await fetch("http://localhost:4000/api/v1/abouts");
@@ -10,12 +11,15 @@ export default async function Home() {
   const assetsResponse = await fetch("http://localhost:4000/api/v1/assets");
   const assets = await assetsResponse.json();
 
+  const adoptssResponse = await fetch("http://localhost:4000/api/v1/adoptsections")
+  const adopts = await adoptssResponse.json()
+
   metadata.title = "Foreningen for Dyrevelfærd";
 
   const asset = assets.reduce((map, asset) => {
     map[asset.id] = asset.url;
     return map;
-  }, {});
+  }, {})
 
   const assetsAndVolunteers = {
     1: 15,
@@ -23,26 +27,32 @@ export default async function Home() {
     3: 13
   };
 
-  const backgroundImageId = 12
+  const firstBackgroundimage = asset[11]
+  const secondBackgroundimage = asset[12]
+  const thridBackgroundimage = asset[1]
+
+  const adoptId1 = adopts[0]
+  const adoptId2 = adopts[1]
+  const adoptId3 = adopts[2]
 
   return (
     <>
       <div
         style={{
-          backgroundImage: "url('/background-kittens.jpg')",
+          backgroundImage: `url(${firstBackgroundimage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           height: "60vh",
-          width: "100vw",
+          width: "100%",
         }}
       >
-        <h1 className="text-white text-6xl font-bold text-start pt-20 pl-36">
-          Foreningen for Dyrevelfærd
-        </h1>
-        <p className="text-white text-start text-2xl font-bold pl-36">
-          Vi specialisere os i Dyrevelfærd
-        </p>
+        {adoptId1 && (
+          <div>
+            <h3 className=" text-white text-5xl text-start pt-14 pl-40">{adoptId1.title}</h3>
+            <p className="text-white text-start text-lg pl-40">{adoptId1.content}</p>
+          </div>
+        )}
       </div>
 
       <article className="px-36 py-6 grid gap-6 grid-cols-3">
@@ -59,7 +69,6 @@ export default async function Home() {
         <div className="grid gap-6 grid-cols-3">
           {volunteers.map((volunteer) => {
             const assetUrl = asset[assetsAndVolunteers[volunteer.id]];
-
             return (
               <div key={volunteer.id} className="bg-white pb-20 shadow-md">
                 <div className="bg-gray-200 py-6 px-4 mb-4 rounded-t">
@@ -78,15 +87,35 @@ export default async function Home() {
         </div>
       </section>
       <section style={{
-        backgroundImage: "url(${backgroundImageId})",
+        backgroundImage: `url(${secondBackgroundimage})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        height: "30vh",
-        width: "100vh"
+        backgroundPosition: "center",
+        height: "50vh",
+        width: "100%"
       }}>
-          
-
-
+        {adoptId2 && (
+          <div>
+            <h3 className="uppercase text-white text-5xl text-start pt-14 pl-36">{adoptId2.title}</h3>
+            <p className="text-white text-start text-lg pl-36">{adoptId2.content}</p>
+          </div>
+        )}
+      </section>
+      <Newsletter />
+      <section style={{
+        backgroundImage: `url(${thridBackgroundimage})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        height: "50vh",
+        width: "100%"
+      }}>
+        {adoptId3 && (
+          <div>
+            <h3 className="uppercase text-white text-5xl text-start pt-14 pl-36">{adoptId3.title}</h3>
+            <p className="text-white text-start text-lg pl-36">{adoptId3.content}</p>
+          </div>
+        )}
       </section>
     </>
   );

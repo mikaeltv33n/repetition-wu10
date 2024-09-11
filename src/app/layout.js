@@ -3,7 +3,7 @@ import "./globals.css"
 import Header from "@/components/header";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-
+import Animals from "@/components/animals";
 export const metadata = {
   title: "Foreningen for Dyrevelfærd",
   description: "vi specialisere os i dyrevelfærd",
@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         {children}
+        <Animals/>
         <Footer />
         <ToastContainer />
       </body>
