@@ -20,7 +20,7 @@ export default async function Home() {
     map[asset.id] = asset.url;
     return map;
   }, {});
-
+  
   const firstBackgroundimage = asset[11]
   const secondBackgroundimage = asset[12]
   const thridBackgroundimage = asset[1]
