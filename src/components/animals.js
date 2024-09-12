@@ -1,9 +1,9 @@
 export default async function Animals() {
-    const animalsResponse = await fetch("http://localhost:4000/api/v1/animals");
-    const animals = await animalsResponse.json();
+    const animalsResponse = await fetch("http://localhost:4000/api/v1/animals")
+    const animals = await animalsResponse.json()
 
-    const assetsResponse = await fetch("http://localhost:4000/api/v1/assets");
-    const assets = await assetsResponse.json();
+    const assetsResponse = await fetch("http://localhost:4000/api/v1/assets")
+    const assets = await assetsResponse.json()
 
     const assetMap = assets.reduce((map, asset) => {
         map[asset.id] = asset.url;

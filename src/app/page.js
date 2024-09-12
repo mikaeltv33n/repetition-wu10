@@ -1,33 +1,33 @@
-import { metadata } from "./layout";
-import Newsletter from "@/components/newsletter";
+import { metadata } from "./layout"
+import Newsletter from "@/components/newsletter"
 
 export default async function Home() {
-  const aboutsResponse = await fetch("http://localhost:4000/api/v1/abouts");
-  const abouts = await aboutsResponse.json();
+  const aboutsResponse = await fetch("http://localhost:4000/api/v1/abouts")
+  const abouts = await aboutsResponse.json()
 
-  const volunteersResponse = await fetch("http://localhost:4000/api/v1/volunteers");
-  const volunteers = await volunteersResponse.json();
+  const volunteersResponse = await fetch("http://localhost:4000/api/v1/volunteers")
+  const volunteers = await volunteersResponse.json()
 
-  const assetsResponse = await fetch("http://localhost:4000/api/v1/assets");
-  const assets = await assetsResponse.json();
+  const assetsResponse = await fetch("http://localhost:4000/api/v1/assets")
+  const assets = await assetsResponse.json()
 
-  const adoptssResponse = await fetch("http://localhost:4000/api/v1/adoptsections");
-  const adopts = await adoptssResponse.json();
+  const adoptssResponse = await fetch("http://localhost:4000/api/v1/adoptsections")
+  const adopts = await adoptssResponse.json()
 
-  metadata.title = "Foreningen for Dyrevelfærd";
+  metadata.title = "Foreningen for Dyrevelfærd"
 
   const asset = assets.reduce((map, asset) => {
     map[asset.id] = asset.url;
     return map;
   }, {});
 
-  const firstBackgroundimage = asset[11];
-  const secondBackgroundimage = asset[12];
-  const thridBackgroundimage = asset[1];
+  const firstBackgroundimage = asset[11]
+  const secondBackgroundimage = asset[12]
+  const thridBackgroundimage = asset[1]
 
-  const adoptId1 = adopts[0];
-  const adoptId2 = adopts[1];
-  const adoptId3 = adopts[2];
+  const adoptId1 = adopts[0]
+  const adoptId2 = adopts[1]
+  const adoptId3 = adopts[2]
 
   return (
     <>
@@ -62,7 +62,7 @@ export default async function Home() {
         <h2 className="text-4xl text-blue-600 font-bold mb-6">Bliv frivillig</h2>
         <div className="grid gap-6 grid-cols-3">
           {volunteers.map((volunteer) => {
-            const assetUrl = asset[volunteer.assetId];
+            const assetUrl = asset[volunteer.assetId]
 
             return (
               <div key={volunteer.id} className="bg-white pb-20 shadow-md">

@@ -58,13 +58,13 @@ export default function Newsletter() {
                 <div className="flex space-x-4">
                     <div className="flex flex-col">
                         <label className="text-start mb-2">
-                            
+
                             <input placeholder="Email" type="email" name="email" className="mt-1 pl-2 w-56 rounded-sm text-black " />
                         </label>
                     </div>
                     <div className="flex flex-col">
                         <label className="text-start mb-2">
-                            <input placeholder="Navn" type="text"  name="name" className="mt-1 pl-2 w-56 rounded-sm text-black " />
+                            <input placeholder="Navn" type="text" name="name" className="mt-1 pl-2 w-56 rounded-sm text-black " />
                         </label>
                         <div className="flex justify-end ">
                             <button
