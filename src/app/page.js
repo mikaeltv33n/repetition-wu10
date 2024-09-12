@@ -11,29 +11,23 @@ export default async function Home() {
   const assetsResponse = await fetch("http://localhost:4000/api/v1/assets");
   const assets = await assetsResponse.json();
 
-  const adoptssResponse = await fetch("http://localhost:4000/api/v1/adoptsections")
-  const adopts = await adoptssResponse.json()
+  const adoptssResponse = await fetch("http://localhost:4000/api/v1/adoptsections");
+  const adopts = await adoptssResponse.json();
 
   metadata.title = "Foreningen for Dyrevelfærd";
 
   const asset = assets.reduce((map, asset) => {
     map[asset.id] = asset.url;
     return map;
-  }, {})
+  }, {});
 
-  const assetsAndVolunteers = {
-    1: 15,
-    2: 14,
-    3: 13
-  };
+  const firstBackgroundimage = asset[11];
+  const secondBackgroundimage = asset[12];
+  const thridBackgroundimage = asset[1];
 
-  const firstBackgroundimage = asset[11]
-  const secondBackgroundimage = asset[12]
-  const thridBackgroundimage = asset[1]
-
-  const adoptId1 = adopts[0]
-  const adoptId2 = adopts[1]
-  const adoptId3 = adopts[2]
+  const adoptId1 = adopts[0];
+  const adoptId2 = adopts[1];
+  const adoptId3 = adopts[2];
 
   return (
     <>
@@ -49,7 +43,7 @@ export default async function Home() {
       >
         {adoptId1 && (
           <div>
-            <h3 className=" text-white text-5xl text-start pt-14 pl-40">{adoptId1.title}</h3>
+            <h3 className="text-white text-5xl text-start pt-14 pl-40">{adoptId1.title}</h3>
             <p className="text-white text-start text-lg pl-40">{adoptId1.content}</p>
           </div>
         )}
@@ -68,7 +62,8 @@ export default async function Home() {
         <h2 className="text-4xl text-blue-600 font-bold mb-6">Bliv frivillig</h2>
         <div className="grid gap-6 grid-cols-3">
           {volunteers.map((volunteer) => {
-            const assetUrl = asset[assetsAndVolunteers[volunteer.id]];
+            const assetUrl = asset[volunteer.assetId];
+
             return (
               <div key={volunteer.id} className="bg-white pb-20 shadow-md">
                 <div className="bg-gray-200 py-6 px-4 mb-4 rounded-t">
@@ -86,14 +81,17 @@ export default async function Home() {
           })}
         </div>
       </section>
-      <section style={{
-        backgroundImage: `url(${secondBackgroundimage})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        height: "50vh",
-        width: "100%"
-      }}>
+
+      <section
+        style={{
+          backgroundImage: `url(${secondBackgroundimage})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          height: "50vh",
+          width: "100%",
+        }}
+      >
         {adoptId2 && (
           <div>
             <h3 className="uppercase text-white text-5xl text-start pt-14 pl-36">{adoptId2.title}</h3>
@@ -101,15 +99,19 @@ export default async function Home() {
           </div>
         )}
       </section>
+
       <Newsletter />
-      <section style={{
-        backgroundImage: `url(${thridBackgroundimage})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        height: "50vh",
-        width: "100%"
-      }}>
+
+      <section
+        style={{
+          backgroundImage: `url(${thridBackgroundimage})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          height: "50vh",
+          width: "100%",
+        }}
+      >
         {adoptId3 && (
           <div>
             <h3 className="uppercase text-white text-5xl text-start pt-14 pl-36">{adoptId3.title}</h3>
